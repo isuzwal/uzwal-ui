@@ -4,7 +4,7 @@ import { motion } from "motion/react";
 export   function Button(){
   return(
 
-    <div className="[perspective::1000px] [transform-style:preserve-3d]   h-screen w-full  flex items-center justify-center">
+    <div className="[perspective::1000px] [transform-style:preserve-3d]   p-5  w-full  flex items-center justify-center">
       <motion.button
         whileHover={{
           rotateX: 20,
