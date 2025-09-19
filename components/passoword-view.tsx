@@ -22,7 +22,6 @@ export function PasswordView() {
         stiffness: 100,
         damping: 15,
         duration: 0.3,
-
         staggerChildren: 0.15,
       },
     },
@@ -56,8 +55,8 @@ export function PasswordView() {
   };
 
   return (
-    <div className="w-full  mt-5 p-6 border-2">
-      <h1 className="text-neutral-700 text-[18px]  text-center font-semibold m-2 ">
+    <div className="w-full  mt-5 p-6 ">
+      <h1 className="text-neutral-200 text-[18px]  text-center font-semibold m-2 ">
         Have to watch the How to apply variant and stagger on multiple children{" "}
       </h1>
 
