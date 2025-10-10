@@ -4,7 +4,7 @@ import Nabar from "@/component/navabar";
 
 export default function Home() {
   return (
-    <div className="bg-neutral-950">
+    <div className="  z-10 relative bg-neutral-950">
       <Contianer>
         <Nabar />
         <Hero />

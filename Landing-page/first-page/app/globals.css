@@ -8,3 +8,8 @@
 @theme{
   --color-primary:oklch(74.6% 0.16 232.661)
 }
+.noise-bg {
+  opacity: 0.2;
+  filter: grayscale(100%);
+  filter: url(#noise-bg-fx);
+}
