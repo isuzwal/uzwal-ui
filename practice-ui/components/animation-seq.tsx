@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 
 export const TextAnimation = () => {
   const [scope, animate] = useAnimate();
-  const text = "Hello it me uzwal  intrvort ,be with onw place .F**K  the this world !";
+  const text = "Hello it me uzwal  intorvort ,be with  own place .F**K  the this world !";
   useEffect(() => {
     animationtext();
   }, []);

@@ -7,10 +7,11 @@ import { PasswordView } from "@/components/passoword-view";
 import { ProjectCard } from "@/components/project-view";
 import { ScrollAnimation } from "@/components/scroll";
 import { SecondButton } from "@/components/second-button";
+import Themecard from "@/components/theme-card";
 
 export default function Home() {
   return (
-    <div className=" flex  flex-col min-h-screen bg-neutral-950  ">
+    <div className=" flex justify-center  items-center min-h-screen bg-neutral-50 dark:bg-neutral-950  ">
       {/* <div className="flex flex-col gap-1  max-w-7xl mx-auto "> */}
         {/* <div className="flex  flex-col md:flex-row  ">
           <PasswordView />
@@ -23,7 +24,8 @@ export default function Home() {
         {/* <ProjectCard /> */}
       {/* </div> */}
       {/* <TextAnimation /> */}
-      <ScrollAnimation/>
+      {/* <ScrollAnimation/> */}
+      <Themecard />
     </div>
   );
 }
