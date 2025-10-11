@@ -1,6 +1,7 @@
 "use client";
 
 import { TextAnimation } from "@/components/animation-seq";
+import BentoCard from "@/components/bento-card";
 import { Button } from "@/components/button-view";
 import { Card } from "@/components/card-view";
 import { PasswordView } from "@/components/passoword-view";
@@ -11,7 +12,7 @@ import Themecard from "@/components/theme-card";
 
 export default function Home() {
   return (
-    <div className=" flex justify-center  items-center min-h-screen bg-neutral-50 dark:bg-neutral-950  ">
+    <div className=" flex min-h-screen bg-neutral-50 dark:bg-neutral-950  ">
       {/* <div className="flex flex-col gap-1  max-w-7xl mx-auto "> */}
         {/* <div className="flex  flex-col md:flex-row  ">
           <PasswordView />
@@ -25,7 +26,8 @@ export default function Home() {
       {/* </div> */}
       {/* <TextAnimation /> */}
       {/* <ScrollAnimation/> */}
-      <Themecard />
+      {/* <Themecard /> */}
+      <BentoCard />
     </div>
   );
 }
