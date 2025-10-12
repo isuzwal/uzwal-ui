@@ -63,7 +63,7 @@ const Card = ({ src, alt, href ,className}: { src: string; alt: string,href:stri
     <Link href={href} target="_blank" className={` group
       after:content-[''] after:absolute after:inset-0 after:bg-black/60 after:opacity-0 after:w-full after:h-full
       hover:after:opacity-90 after:transition after:duration-300 max-w-xl mx-auto rounded-md
-      relative mb-2 overflow-hidden shadow-sm block group transition duration-300 ${className}`} > // for adding  extract style 
+      relative mb-2 overflow-hidden shadow-sm block group transition duration-300 ${className}`} >
       <Image src={src} width={500} height={500} alt={alt} className="w-full" />
       <p className=" opacity-0   hover:opacity-100   z-20 transition-all duration-300
       absolute inset-0 text-white font-medium  items-center  m-auto justify-center  flex text-sm">{href.split("https://")[1]}</p>
