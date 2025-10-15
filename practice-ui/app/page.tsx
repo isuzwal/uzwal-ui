@@ -4,6 +4,7 @@ import { TextAnimation } from "@/components/animation-seq";
 import BentoCard from "@/components/bento-card";
 import { Button } from "@/components/button-view";
 import { Card } from "@/components/card-view";
+import { NextJSButton } from "@/components/next-js-button";
 import { PasswordView } from "@/components/passoword-view";
 import Progressbar from "@/components/progress-bar";
 import { ProjectCard } from "@/components/project-view";
@@ -38,7 +39,8 @@ export default function Home() {
       {/* <ScrollAnimation/> */}
       {/* <Themecard /> */}
       {/* <BentoCard /> */}
-      <Progressbar />
+      {/* <Progressbar /> */}
+      <NextJSButton />
     </div>
   );
 }
