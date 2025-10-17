@@ -7,6 +7,8 @@
 :root {
   --background:var(--color-neutral-50)
   --foreground:var(--color-neutral-950)
+  ----color-line:var(--color-neutral-500)
+   --beam-line: oklch(37.1% 0 0); 
 }
 @theme  inline {
  ----color-background:var(--background)
@@ -15,4 +17,5 @@
 .dark{
   --background:var(--color-neutral-950)
   --foreground:var(--color-neutral-50)
+    --beam-line: oklch(83.3% 0.145 321.434); 
 }

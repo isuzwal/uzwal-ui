@@ -1,6 +1,7 @@
 "use client";
 
 import { TextAnimation } from "@/components/animation-seq";
+import { BeanLine } from "@/components/beam-line";
 import BentoCard from "@/components/bento-card";
 import { Button } from "@/components/button-view";
 import { Card } from "@/components/card-view";
@@ -40,7 +41,9 @@ export default function Home() {
       {/* <Themecard /> */}
       {/* <BentoCard /> */}
       {/* <Progressbar /> */}
-      <NextJSButton />
+      {/* <NextJSButton /> */}
+      <BeanLine />
     </div>
   );
 }
+ 
