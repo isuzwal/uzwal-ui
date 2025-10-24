@@ -10,6 +10,7 @@ import { PasswordView } from "@/components/passoword-view";
 import Progressbar from "@/components/progress-bar";
 import { ProjectCard } from "@/components/project-view";
 import { ScrollAnimation } from "@/components/scroll";
+import { SecondBento } from "@/components/second-bento-card";
 import { SecondButton } from "@/components/second-button";
 import Themecard from "@/components/theme-card";
 import { Moon, Sun } from "lucide-react";
@@ -42,7 +43,8 @@ export default function Home() {
       {/* <BentoCard /> */}
       {/* <Progressbar /> */}
       {/* <NextJSButton /> */}
-      <BeanLine />
+      {/* <BeanLine /> */}
+      <SecondBento />
     </div>
   );
 }
