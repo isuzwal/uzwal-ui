@@ -1,5 +1,4 @@
-
-import { Check, Eye, FilterIcon, Handshake, Search } from "lucide-react";
+import { Check, Eye, FilterIcon, Folder, Handshake, Save, SaveAll, Search, Star } from "lucide-react";
 import Image from "next/image";
 import { Line, SVGLine, SVGLine1, SVGLine2, SVGLine3 } from "./beam-lights";
 
@@ -8,7 +7,7 @@ export const SecondBento = () => {
     <div className="flex  min-h-screen max-w-7xl mx-auto w-full">
       <div className=" w-full grid grid-cols-1  md:grid-cols-2 xl:grid-cols-3 gap-2 rounded-md p-2">
         <LeftSide />
-        <div className="flex  text-neutral-500 border">Hello</div>
+        <Middle />
         <div className="flex  text-neutral-500 border">Hello</div>
       </div>
     </div>
@@ -86,8 +85,8 @@ const LeftSide = () => {
             </div>
           </div>
           <div className="  relative flex  flex-col   gap-6 justify-between items-center  max-w-md w-full mx-auto h-48 bg-neutral-900/60   border-neutral-900 border rounded-lg shadow-2xs px-3  py-2  mt-8 ">
-              <div className="h-3 w-3 bg-neutral-800 border border-neutral-800  rounded-full z-10 absolute  left-[50%] -top-1.5 " />
-              <div className="w-full flex top-0   left-0 justify-between absolute gap-2 items-center">
+            <div className="h-3 w-3 bg-neutral-800 border border-neutral-800  rounded-full z-10 absolute  left-[50%] -top-1.5 " />
+            <div className="w-full flex top-0   left-0 justify-between absolute gap-2 items-center">
               <SVGLine2 />
               <SVGLine3 />
             </div>
@@ -182,6 +181,45 @@ const LeftSide = () => {
           <p className="text-neutral-500 text-[14px] font-semibold leading-tight">
             We specilaize in crafting striking descriptions that showcase your company
             curlture,compelling only the SEOs with superior ablity to apply
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const Middle = () => {
+  return (
+    <div className="flex justify-between  gap-2  ">
+      <div className="  flex flex-col  justify-between gap-3  max-w-xl mx-auto w-full  border  dark:bg-zinc-900/60   dark:border-neutral-900  rounded-xl p-4 shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] h-72">
+        <div className="w-full relative mt-2">
+          <div className=" relative rounded-xl flex w-[70%]  flex-col gap-6  justify-between border-neutral-800 bg-neutral-800/40 px-3  py-5">
+            <div className="flex gap-1">
+              <Star className=" text-neutral-600 fill-neutral-600" />
+              <Star className=" text-neutral-600 fill-neutral-600" />
+              <Star className=" text-neutral-600 fill-neutral-600" />
+              <Star className=" text-neutral-600 fill-neutral-600" />
+              <Star className=" text-neutral-600 " />
+            </div>
+            <div className="flex gap-2 flex-col">
+            <div className="h-[6px] bg-neutral-700/20 w-[60%] rounded-lg" />
+            <div className="h-[6px] bg-neutral-700/20 w-1/2 rounded-lg" />
+            </div>
+          <div className=" top-1 right-1 absolute border w-20 h-20 rounded-lg rotate-12 flex items-center justify-center bg-neutral-800/70 z-10 border-neutral-800">
+             <Image src={"/images/isuzwal.jpg"} height={50}  width={50} alt="me" className="rounded-full" />
+          </div>
+          </div>
+            <div className=" top-4 right-3 absolute border w-20 h-20 rounded-lg -rotate-12 flex items-center justify-center bg-neutral-800/70 z-10 border-neutral-800">
+              <Folder  className="text-neutral-300 size-8"/>
+          </div>
+        </div>
+        <div className="flex flex-col gap-2  items-start mt-2 ">
+          <h1 className="font-medium text-[24px] leading-tight text-neutral-950  dark:text-neutral-300">
+            Tailor the recruits with <br /> our own traning method
+          </h1>
+          <p className="text-neutral-500 text-[14px] leading-tight font-semibold">
+            After we recruit the experts ,we train them up a little bit more just to fine tuning
+            thier skills to ake industry fit.
           </p>
         </div>
       </div>
