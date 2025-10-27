@@ -1,6 +1,17 @@
-import { Check, Eye, FilterIcon, Folder, Handshake, Save, SaveAll, Search, Star } from "lucide-react";
+import {
+  Check,
+  Eye,
+  FilterIcon,
+  Folder,
+  Handshake,
+  Save,
+  SaveAll,
+  Search,
+  Star,
+} from "lucide-react";
 import Image from "next/image";
 import { Line, SVGLine, SVGLine1, SVGLine2, SVGLine3 } from "./beam-lights";
+import { motion, Variants } from "motion/react";
 
 export const SecondBento = () => {
   return (
@@ -189,28 +200,56 @@ const LeftSide = () => {
 };
 
 const Middle = () => {
+  const stars = [
+    "text-green-200 fill-green-200",
+    "text-green-300 fill-green-300",
+    "text-green-400 fill-green-400",
+    "text-green-500 fill-green-500",
+    "text-green-600 fill-green-600",
+  ];
+  const container: Variants = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2, // delay between each star
+      },
+    },
+  };
+
+  const item: Variants = {
+    hidden: { opacity: 0, scale: 0.8, y: 10 },
+    show: { opacity: 1, scale: 1, y: 0, transition: { type: "spring", stiffness: 200 } },
+  };
+
   return (
     <div className="flex justify-between  gap-2  ">
       <div className="  flex flex-col  justify-between gap-3  max-w-xl mx-auto w-full  border  dark:bg-zinc-900/60   dark:border-neutral-900  rounded-xl p-4 shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] h-72">
         <div className="w-full relative mt-2">
           <div className=" relative rounded-xl flex w-[70%]  flex-col gap-6  justify-between border-neutral-800 bg-neutral-800/40 px-3  py-5">
-            <div className="flex gap-1">
-              <Star className=" text-neutral-600 fill-neutral-600" />
-              <Star className=" text-neutral-600 fill-neutral-600" />
-              <Star className=" text-neutral-600 fill-neutral-600" />
-              <Star className=" text-neutral-600 fill-neutral-600" />
-              <Star className=" text-neutral-600 " />
-            </div>
+            <motion.div variants={container} initial="hidden" animate="show" className="flex gap-1">
+              {stars.map((color, i) => (
+                <motion.div key={i} variants={item}>
+                  <Star className={color + " w-6 h-6"} />
+                </motion.div>
+              ))}
+            </motion.div>
             <div className="flex gap-2 flex-col">
-            <div className="h-[6px] bg-neutral-700/20 w-[60%] rounded-lg" />
-            <div className="h-[6px] bg-neutral-700/20 w-1/2 rounded-lg" />
+              <div className="h-[6px] bg-neutral-700/20 w-[60%] rounded-lg" />
+              <div className="h-[6px] bg-neutral-700/20 w-1/2 rounded-lg" />
             </div>
-          <div className=" top-1 right-1 absolute border w-20 h-20 rounded-lg rotate-12 flex items-center justify-center bg-neutral-800/70 z-10 border-neutral-800">
-             <Image src={"/images/isuzwal.jpg"} height={50}  width={50} alt="me" className="rounded-full" />
+            <div className=" top-1 right-1 absolute border w-20 h-20 rounded-lg rotate-12 flex items-center justify-center bg-neutral-800/70 z-10 border-neutral-800">
+              <Image
+                src={"/images/isuzwal.jpg"}
+                height={50}
+                width={50}
+                alt="me"
+                className="rounded-full"
+              />
+            </div>
           </div>
-          </div>
-            <div className=" top-4 right-3 absolute border w-20 h-20 rounded-lg -rotate-12 flex items-center justify-center bg-neutral-800/70 z-10 border-neutral-800">
-              <Folder  className="text-neutral-300 size-8"/>
+          <div className=" top-4 right-3 absolute border w-20 h-20 rounded-lg -rotate-12 flex items-center justify-center bg-neutral-800/70 z-10 border-neutral-800">
+            <Folder className="text-neutral-300 size-8" />
           </div>
         </div>
         <div className="flex flex-col gap-2  items-start mt-2 ">
