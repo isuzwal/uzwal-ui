@@ -1,5 +1,6 @@
 import {
   Check,
+  Earth,
   Eye,
   FilterIcon,
   Folder,
@@ -8,6 +9,7 @@ import {
   SaveAll,
   Search,
   Star,
+  WholeWord,
 } from "lucide-react";
 import Image from "next/image";
 import { Line, SVGLine, SVGLine1, SVGLine2, SVGLine3 } from "./beam-lights";
@@ -19,21 +21,21 @@ export const SecondBento = () => {
       <div className=" w-full grid grid-cols-1  md:grid-cols-2 xl:grid-cols-3 gap-2 rounded-md p-2">
         <LeftSide />
         <Middle />
-        <div className="flex  text-neutral-500 border">Hello</div>
+        {/* <div className="flex  text-neutral-500 border">Hello</div> */}
       </div>
     </div>
   );
 };
 const LeftSide = () => {
   return (
-    <div className="flex flex-col  gap-5 ">
+    <div className="flex flex-col  gap-2 ">
       <div className="  border flex  max-w-xl mx-auto w-full h-80 flex-col justify-between gap-2 items-center shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] dark:bg-zinc-900/60   dark:border-neutral-900  shadow-xl  bg-white/90  border-neutral-50 text-neutral-500  rounded-xl p-2">
         <div className=" flex  flex-1 mask mask-t-from-90% flex-col w-full  max-w-2xl mx-auto p-1.5">
           <div className="flex  flex-col gap-3  justify-center h-full relative  ">
             <div className="h-[24px] absolute inset-0 -top-4 left-20     w-72 bg-neutral-900  rounded-lg" />
             <div className=" relative w-full flex justify-between items-center">
-              <div className=" absolute  -top-3 bg-neutral-900/90  border border-neutral-900/80  shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] rounded-full flex items-center ">
-                <Check className="text-neutral-500 size-5 mt-0.5" />
+              <div className=" absolute  -top-1 left-1 bg-green-400  border border-green-400 h-4 w-4  rounded-full flex items-center ">
+                <Check className="text-neutral-300 size-5 mt-0.5 font-bold" />
               </div>
               <div className=" ml-3 flex w-72 rounded-lg dark:bg-neutral-900/60 dark:border-neutral-900 p-1.5">
                 <Image
@@ -184,7 +186,7 @@ const LeftSide = () => {
             </div>
           </div>
         </div>
-        <div className=" flex flex-col gap-2 justify-start max-w-xl mx-auto w-full  mt-20 p-1.5">
+        <div className=" flex flex-col gap-2 justify-start max-w-xl mx-auto w-full  p-1.5">
           <h1 className="text-neutral-300 text-[24px] font-semibold ">
             The Seo talent Hub <br />
             Recruitment Foramula
@@ -208,26 +210,31 @@ const Middle = () => {
     "text-green-600 fill-green-600",
   ];
   const container: Variants = {
-    hidden: { opacity: 0 },
+    rest: { opacity: 1 },
     show: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.2, // delay between each star
+        staggerChildren: 0.15,
       },
     },
   };
 
   const item: Variants = {
-    hidden: { opacity: 0, scale: 0.8, y: 10 },
-    show: { opacity: 1, scale: 1, y: 0, transition: { type: "spring", stiffness: 200 } },
+    rest: { opacity: 0.5, y: 0.2 },
+    show: { opacity: 1, y: 0, transition: { type: "spring", stiffness: 200 } },
   };
 
   return (
-    <div className="flex justify-between  gap-2  ">
-      <div className="  flex flex-col  justify-between gap-3  max-w-xl mx-auto w-full  border  dark:bg-zinc-900/60   dark:border-neutral-900  rounded-xl p-4 shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] h-72">
-        <div className="w-full relative mt-2">
-          <div className=" relative rounded-xl flex w-[70%]  flex-col gap-6  justify-between border-neutral-800 bg-neutral-800/40 px-3  py-5">
-            <motion.div variants={container} initial="hidden" animate="show" className="flex gap-1">
+    <div className="flex flex-col  gap-2   ">
+      <div className="  flex flex-col  justify-between gap-3  max-w-xl mx-auto w-full  border  dark:bg-zinc-900/60   dark:border-neutral-900  rounded-xl p-3 shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] ">
+        <motion.div
+          whileHover="show"
+          variants={container}
+          initial="hidden"
+          animate="rest"
+          className="w-full relative mt-2">
+          <div className=" relative rounded-xl flex w-[80%]  flex-col gap-6  justify-between border-neutral-800 bg-neutral-800/40 px-3  py-5">
+            <motion.div className="flex gap-1">
               {stars.map((color, i) => (
                 <motion.div key={i} variants={item}>
                   <Star className={color + " w-6 h-6"} />
@@ -238,7 +245,7 @@ const Middle = () => {
               <div className="h-[6px] bg-neutral-700/20 w-[60%] rounded-lg" />
               <div className="h-[6px] bg-neutral-700/20 w-1/2 rounded-lg" />
             </div>
-            <div className=" top-1 right-1 absolute border w-20 h-20 rounded-lg rotate-12 flex items-center justify-center bg-neutral-800/70 z-10 border-neutral-800">
+            <div className=" shadow-[0_0_8px_2px_rgba(105,230,124,0.4)] bg-neutral-800/70 border-neutral-800 top-1 right-1 absolute border w-20 h-20 rounded-lg rotate-12 flex items-center justify-center">
               <Image
                 src={"/images/isuzwal.jpg"}
                 height={50}
@@ -248,10 +255,8 @@ const Middle = () => {
               />
             </div>
           </div>
-          <div className=" top-4 right-3 absolute border w-20 h-20 rounded-lg -rotate-12 flex items-center justify-center bg-neutral-800/70 z-10 border-neutral-800">
-            <Folder className="text-neutral-300 size-8" />
-          </div>
-        </div>
+         
+        </motion.div>
         <div className="flex flex-col gap-2  items-start mt-2 ">
           <h1 className="font-medium text-[24px] leading-tight text-neutral-950  dark:text-neutral-300">
             Tailor the recruits with <br /> our own traning method
@@ -259,6 +264,90 @@ const Middle = () => {
           <p className="text-neutral-500 text-[14px] leading-tight font-semibold">
             After we recruit the experts ,we train them up a little bit more just to fine tuning
             thier skills to ake industry fit.
+          </p>
+        </div>
+      </div>
+      <div className="flex  flex-col  justify-between gap-3  max-w-xl mx-auto w-full  border  dark:bg-zinc-900/60   dark:border-neutral-900  rounded-xl p-4 shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px]">
+        <div className="flex gap-2 justify-between  p-1 ">
+          <div className="  w-1/2  flex items-end  flex-col  justify-end gap-1 p-1">
+            <div className=" flex w-32 rounded-xl bg-neutral-900/80  border-neutral-900/80 border flex-col  items-center gap-1 p-1 ">
+              <div className="flex gap-1   items-end">
+                <div className="rounded-4xl p-0.5 h-10 w-[22px] flex  justify-center items-start bg-green-400 opacity-75 border border-green-400">
+                  <Image
+                    src="/images/wife.jpg"
+                    width={20}
+                    height={20}
+                    className="rounded-full"
+                    alt="_me"
+                  />
+                </div>
+                <div className="rounded-4xl p-0.5 h-14 w-[22px] flex  justify-center items-start bg-green-400 opacity-75 border border-green-400">
+                  <Image
+                    src="/images/isuzwal.jpg"
+                    width={20}
+                    height={20}
+                    className="rounded-full"
+                    alt="_me"
+                  />
+                </div>
+                <div className="rounded-4xl p-0.5 h-12  w-[22px] flex  justify-center items-start bg-green-400 opacity-75 border border-green-400">
+                  <Image
+                    src="/images/old.jpeg"
+                    width={20}
+                    height={20}
+                    className="rounded-full"
+                    alt="_me"
+                  />
+                </div>
+              </div>
+              <p className="text-[12px] text-neutral-500 font-semibold">
+                Top <span className="font-bold text-[13px] text-neutral-300">5%</span> talent
+              </p>
+            </div>
+            <div className="relative rounded-2xl w-full h-52 overflow-hidden">
+              <Image src="/images/lady.png" alt="_lady" fill className="object-cover" />
+            </div>
+            <div className=" grid grid-cols-5  gap-1 w-20 mt-2 ">
+              {Array.from({ length: 25 }).map((_, i) => (
+                <div key={i} className="w-2 h-2 bg-neutral-500 rounded-full"></div>
+              ))}
+            </div>
+          </div>
+          <div className="flex flex-col gap-1 w-1/2 justify-start items-start">
+            <div className="relative rounded-2xl w-full h-72 overflow-hidden">
+              <Image src="/images/third.png" alt="_lady" fill className="object-cover" />
+            </div>
+            <div className=" flex  gap-1 boder border-neutral-800/80 bg-neutral-800 rounded-lg w-36 mt-4 ">
+              <div className="flex flex-col gap-1 px-2 py-1 mt-2">
+                <div className="bg-green-400/80   flex items-center justify-center rounded-full h-4 w-4  p-1">
+                  <Earth className="text-neutral-300  size-12" />
+                </div>
+                <p className="text-neutral-500 text-[8px] font-medium">
+                  ENGAGEMENT <br />
+                  <span className=" font-bold text-neutral-400 text-[10px]">+22%</span>
+                </p>
+              </div>
+              <div className=" flex w-full items-end justify-center gap-0.5 px-1 py-0.5  mr-1">
+                <div className="w-4 h-12 rounded   relative overflow-hidden">
+                  <div
+                    className="absolute inset-0 "
+                    style={{
+                      backgroundImage:
+                    "repeating-linear-gradient(45deg, #e0e0e0 0, #e0e0e0 1px, transparent 1px, transparent 4px)" }} />
+                </div>
+                <div className="w-4 h-9 rounded   bg-[#3535A5] " />
+                <div className="w-4 h-14 rounded  bg-gradient-to-b from-green-400 to-green-200" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="flex flex-col gap-2  items-start mt-4 ">
+          <h1 className="font-medium text-[24px] leading-tight text-neutral-950  dark:text-neutral-300">
+            A global leader in SEO <br /> Recruitment{" "}
+          </h1>
+          <p className="text-neutral-500 text-[14px] leading-tight font-semibold">
+            We empower progressive, ambitions comapanies who wish to hire the best SEO talent
+            worildwide
           </p>
         </div>
       </div>

@@ -28,13 +28,12 @@ export default function Home() {
        </button>
       {/* <div className="flex flex-col gap-1  max-w-7xl mx-auto "> */}
         {/* <div className="flex  flex-col md:flex-row  ">
-          <PasswordView />
           <Card />
-        </div>
-        <div className="flex justify-center items-center gap-1   flex-col md:flex-row">
-        <Button />
-        <SecondButton />
-        </div> */}
+          </div>
+          <div className="flex justify-center items-center gap-1   flex-col md:flex-row">
+          <Button />
+          <SecondButton />
+          </div> */}
         {/* <ProjectCard /> */}
       {/* </div> */}
       {/* <TextAnimation /> */}
@@ -44,6 +43,7 @@ export default function Home() {
       {/* <Progressbar /> */}
       {/* <NextJSButton /> */}
       {/* <BeanLine /> */}
+          {/* <PasswordView /> */}
       <SecondBento />
     </div>
   );
