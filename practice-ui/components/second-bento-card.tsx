@@ -463,7 +463,7 @@ const Right = () => {
                   cy="10"
                   fill="transparent"
                   stroke="oklch(79.2% 0.209 151.711)"
-                  stroke-width="10"
+                  strokeWidth="10"
                   stroke-dasharray="calc(35 * 31.4 / 100) 31.4"
                   transform="rotate(-90) translate(-20)"
                  

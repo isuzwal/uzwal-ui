@@ -12,6 +12,7 @@ import { ProjectCard } from "@/components/project-view";
 import { ScrollAnimation } from "@/components/scroll";
 import { SecondBento } from "@/components/second-bento-card";
 import { SecondButton } from "@/components/second-button";
+import { SibeBar } from "@/components/sidebar-view";
 import Themecard from "@/components/theme-card";
 import { Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
@@ -23,7 +24,7 @@ export default function Home() {
       }
   return (
     <div className=" flex flex-col min-h-screen bg-neutral-50 dark:bg-neutral-950  ">
-      <button onClick={handleTheme} className="rounded-md px-4 py-1.5 font-semibold  w-14   ml-6 mt-2  border-neutral-50 bg-neutral-200 dark:border-neutral-950 dark:bg-neutral-900 dark:text-white text-black text-shadow-2xs cursor-pointer  text-[12px] border ">
+      <button onClick={handleTheme} className="rounded-md px-4 py-1.5 font-semibold  w-14   ml-6 mt-2   dark:text-white text-black text-shadow-2xs cursor-pointer  text-[12px]  ">
              {theme === "dark" ? <Sun size={16} /> : <Moon size={16} />}
        </button>
       {/* <div className="flex flex-col gap-1  max-w-7xl mx-auto "> */}
@@ -43,8 +44,9 @@ export default function Home() {
       {/* <Progressbar /> */}
       {/* <NextJSButton /> */}
       {/* <BeanLine /> */}
-          {/* <PasswordView /> */}
-      <SecondBento />
+      {/* <PasswordView /> */}
+      {/* <SecondBento /> */}
+      <SibeBar />
     </div>
   );
 }
