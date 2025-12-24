@@ -7,7 +7,7 @@ export const TextAnimation = () => {
     "Hello it me uzwal  intorvort ,be with  own place .F**K  the this world !";
   useEffect(() => {
     animationtext();
-  }, []);
+  });
   const animationtext = () => {
     animate(
       "p",
