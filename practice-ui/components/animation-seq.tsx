@@ -3,7 +3,8 @@ import React, { useEffect } from "react";
 
 export const TextAnimation = () => {
   const [scope, animate] = useAnimate();
-  const text = "Hello it me uzwal  intorvort ,be with  own place .F**K  the this world !";
+  const text =
+    "Hello it me uzwal  intorvort ,be with  own place .F**K  the this world !";
   useEffect(() => {
     animationtext();
   }, []);
@@ -25,16 +26,18 @@ export const TextAnimation = () => {
   return (
     <div
       ref={scope}
-      className="max-w-2xl mx-auto w-full flex  h-screen justify-center items-center text-white">
+      className="max-w-2xl mx-auto w-full flex  justify-center items-center text-white"
+    >
       {text.split("").map((word, idx) => (
         <motion.p
-        style={{
-            opacity:0,
-            filter:"blur(10px)",
-            y:10
-        }}
-        
-        className="inline-block text-2xl  font-semibold" key={word + idx}>
+          style={{
+            opacity: 0,
+            filter: "blur(10px)",
+            y: 10,
+          }}
+          className="inline-block text-2xl  font-semibold"
+          key={word + idx}
+        >
           {word} &nbsp;
         </motion.p>
       ))}

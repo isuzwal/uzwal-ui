@@ -25,12 +25,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-        <body
-          className={`${geistSans.variable} ${geistMono.variable}  antialiased`}>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable}  antialiased dark:bg-black bg-white`}
+      >
         <ThemeProvider defaultTheme="system" enableSystem attribute="class">
           {children}
-      </ThemeProvider>
-        </body>
+        </ThemeProvider>
+      </body>
     </html>
   );
 }
