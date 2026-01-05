@@ -45,10 +45,13 @@ This project is a collection of UI design experiments and learning exercises. It
 
 ```
 practice-ui/
-├── src/
-│   ├── components/
-│   ├── styles/
-│   └── App.js
+├── app/
+│   ├── pages.tsx/
+│   ├── layout.tsx/
+│   └── globals.css
+├── components/
+│   ├── ui/
+│        ├── button.tsx/
 ├── public/
 ├── README.md
 └── package.json
