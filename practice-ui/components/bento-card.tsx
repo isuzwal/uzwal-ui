@@ -26,7 +26,7 @@ export default function BentoCard() {
             className=""
           />
           <Card src="/images/3.jpg" alt="5" href="#" className="" />
-          <Card src="/images/6.jpg" alt="sixth" href="#" className="" />
+          <Card src="/images/7.png" alt="sixth" href="#" className="" />
           <Card src="/images/7.png" alt="Seven" href="#" className="" />
           <Card
             src="/images/8.png"
@@ -91,7 +91,7 @@ const Header = () => {
       <h1 className="text-4xl tracking-tighter  dark:text-neutral-200  text-neutral-900 font-bold">
         Bento grids are cool, you should try it sometimes
       </h1>
-      <p className="text-base dark:text-neutral-400  text-neutral-800 mx-w-xl mt-5 font-medium">
+      <p className="text-base dark:text-neutral-400  text-neutral-800 max-w-xl mt-5 font-medium">
         Discover innvovation soluation that tranfrom the way of styling work.
         Our cutting-edge tools are desgined to empower your style.
       </p>
@@ -125,8 +125,8 @@ const Card = ({
     >
       <Image src={src} width={500} height={500} alt={alt} className="w-full" />
       <p
-        className=" opacity-0   hover:opacity-100   z-20 transition-all duration-300
-      absolute inset-0 text-white font-medium  items-center  m-auto justify-center  flex text-sm"
+        className="opacity-0 hover:opacity-100 bg-black/60 z-20 transition-all duration-300
+      absolute inset-0 text-white font-medium items-center m-auto justify-center flex text-sm"
       >
         {href.split("https://")[1]}
       </p>
