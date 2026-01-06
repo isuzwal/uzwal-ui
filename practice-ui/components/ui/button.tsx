@@ -3,7 +3,7 @@ import { cn } from "@/lib/utils";
 
 /*  @define button variant 
      @define button size 
- */
+*/
 
 type ButtonVariant = "deafault" | "primary" | "secondary";
 type ButtonSize = "sm" | "md" | "lg";

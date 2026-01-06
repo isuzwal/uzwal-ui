@@ -1,32 +1,47 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Barlow_Condensed, Barlow_Semi_Condensed } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "next-themes";
 
-const geistSans = Geist({
+const geistSans = Barlow_Semi_Condensed({
   variable: "--font-geist-sans",
   subsets: ["latin"],
+  weight: ["400", "700"],
 });
 
-const geistMono = Geist_Mono({
+const geistMono = Barlow_Condensed({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+  weight: ["400", "700"],
 });
 
 export const metadata: Metadata = {
   title: "Uzwal UI",
   description:
-    "A modern UI practice project built with Next.js, featuring customizable themes and beautiful typography.",
+    "A modern UI practice project built with Next.js, featuring customizable themes, beautiful typography, and a growing UI component library.",
   authors: [{ name: "Uzwal", url: "https://github.com/isuzwal" }],
-  keywords: ["Next.js", "UI", "React", "Theme", "Geist", "Practice"],
+  keywords: [
+    "Next.js",
+    "UI",
+    "React",
+    "Theme",
+    "Geist",
+    "Practice",
+    "UI Library",
+    "Component Library",
+    "Design System",
+    "TailwindCSS",
+    "Accessibility",
+    "Dark Mode",
+  ],
   icons: [
     { rel: "icon", url: "/favicon.ico" },
     { rel: "apple-touch-icon", url: "/apple-touch-icon.png" },
   ],
   openGraph: {
-    title: "Uzwal UI",
+    title: "Visual UI",
     description:
-      "A modern UI practice project built with Next.js, featuring customizable themes and beautiful typography.",
+      "A modern UI practice project built with Next.js, featuring customizable themes, beautiful typography, and a robust UI component library.",
     url: "https://your-domain.com",
     siteName: "Uzwal UI",
     images: [
@@ -34,7 +49,7 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Uzwal UI Open Graph Image",
+        alt: "Visual UI Open Graph Image",
       },
     ],
     locale: "en_US",
@@ -42,9 +57,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Uzwal UI",
+    title: "Visual UI",
     description:
-      "A modern UI practice project built with Next.js, featuring customizable themes and beautiful typography.",
+      "A modern UI practice project built with Next.js, featuring customizable themes, beautiful typography, and a robust UI component library.",
     images: ["/og-image.png"],
   },
 };
